@@ -1,0 +1,16 @@
+.container {
+    margin: 20px 0px;
+}
+
+.carr {
+    padding-bottom: 50px;
+}
+
+.destaque {
+    background-color: red;
+    border-width: 5px;
+    border-color: blue;
+    text-align: right;
+    width: 600px;
+    color: black;
+}

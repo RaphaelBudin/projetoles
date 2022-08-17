@@ -1,0 +1,17 @@
+.container {
+    text-align: center;
+}
+
+.destaque {
+    background-color: red;
+    border-width: 5px;
+    border-color: blue;
+}
+
+.imagem {
+    height: 400px;
+}
+
+.info {
+    margin-bottom: 75px;
+}
