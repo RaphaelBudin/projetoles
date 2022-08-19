@@ -9,6 +9,8 @@ export default function Livro (props) {
                 <img 
                     src={props.src} 
                     alt={props.alt} 
+                    h={props.h}
+                    w={props.w}
                     className="imagem"
                 />
             </Col>

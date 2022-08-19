@@ -1,5 +1,5 @@
 import "./Body.css";
-import InputPesquisa from "./InputPesquisa";
+//import InputPesquisa from "./InputPesquisa";
 import Lancamentos from "./Lancamentos/Lancamentos";
 import Container from "react-bootstrap/Container";
 import MaisVendidos from "./MaisVendidos/MaisVendidos";

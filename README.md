@@ -1,10 +1,11 @@
 Projeto de E-commerce para atender a disciplina de Laboratório de Engenharia de Software ministrada na Fatec Mogi das Cruzes pelo professor Rodrigo.
 
 # Layout e Estética
-- [ ] Fixar o rodapé no final, sem a faixa branca depois
+- [ ] Corrigir o rodapé no final, sem a faixa branca depois
 
 # Funcionalidades Front-End
-
+### Página Inicial, Navbar e Footer
+- [ ] Adicionar Login/Avatar 
 ### Grupo Livros
 - [ ] Fazer página de Cadastro de Livros
 - [ ] Fazer página de Detalhe do Livro
