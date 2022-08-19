@@ -1,0 +1,11 @@
+.button {
+    border: none;
+    background-color: transparent;
+}
+
+.texto-carrinho {
+    color: darkblue;
+    font-weight: bold;
+    margin-top: 5px;
+    border:none;
+}

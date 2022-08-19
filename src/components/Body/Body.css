@@ -1,3 +1,8 @@
 .container {
     margin-top: 40px;
 }
+
+.lancamentos {
+    max-height: 50px;
+    max-width: 50px;
+}

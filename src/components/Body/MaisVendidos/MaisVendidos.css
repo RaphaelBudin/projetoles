@@ -1,0 +1,20 @@
+.info-livros {
+    line-height: 10px;
+}
+
+.titulo {
+    font-weight: bold;
+    font-size: large;
+}
+
+.autor {
+    font-style: italic;
+    font-size: medium;
+}
+
+.preco {
+    font-size: medium;
+    font-weight: bold;
+    color: blue;
+
+}
