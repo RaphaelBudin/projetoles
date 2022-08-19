@@ -20,12 +20,12 @@ Projeto de E-commerce para atender a disciplina de Laboratório de Engenharia de
 
 |Requisito|Título|Descrição|
 |---|---|---|
-|RF0011|Cadastrar Livro|O sistema deve manter um cadastro único para livros.|
-|RF0012|Inativar cadastro de livro|O sistema deve possibilitar que livros sejam inativados|
-|RF0013|Inativar livro de forma automática|O sistema deve inativar livros sem estoque e que não possuem venda com valor inferior a parâmetro predefinido no sistema.|
-|RF0014|Alterar cadastro de livro|O sistema deve possibilitar a alteração de dados cadastrais para os livros.|
-|RF0015|Consulta de livros|O sistema deve possibilitar que um livro seja consulta do com base em um filtro definido pelo usuário. Todos os campos utilizados para identificação do livro podem ser utilizados como filtro, tanto de forma combinada como de forma isolada.
-|RF0016|Ativar cadastro de livros|Deve ser possível ativar o cadastro de um livro.
+|-[ ] RF0011|Cadastrar Livro|O sistema deve manter um cadastro único para livros.|
+|-[ ] RF0012|Inativar cadastro de livro|O sistema deve possibilitar que livros sejam inativados|
+|-[ ] RF0013|Inativar livro de forma automática|O sistema deve inativar livros sem estoque e que não possuem venda com valor inferior a parâmetro predefinido no sistema.|
+|-[ ] RF0014|Alterar cadastro de livro|O sistema deve possibilitar a alteração de dados cadastrais para os livros.|
+|-[ ] RF0015|Consulta de livros|O sistema deve possibilitar que um livro seja consulta do com base em um filtro definido pelo usuário. Todos os campos utilizados para identificação do livro podem ser utilizados como filtro, tanto de forma combinada como de forma isolada.
+|-[ ] RF0016|Ativar cadastro de livros|Deve ser possível ativar o cadastro de um livro.
 
 ## Grupo: Cadastro de Clientes
 
