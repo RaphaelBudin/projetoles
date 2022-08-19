@@ -1,17 +1,64 @@
 Projeto de E-commerce para atender a disciplina de Laboratório de Engenharia de Software ministrada na Fatec Mogi das Cruzes pelo professor Rodrigo.
-
-# TODO
-
-## Layout && Estética
+# Layout && Estética
 - [ ] Fixar o rodapé no final, sem a faixa branca depois
 
+# Funcionalidades
 
-## Funcionalidades
+### Grupo Livros
+- [ ] Fazer página de Cadastro de Livros
+- [ ] Fazer página de Detalhe do Livro
+- [ ] RN0011
+- [ ] RN0012 
+- [ ] RN0015 
+- [ ] RN0016 -> criar carimbo FORA DE MERCADO em vermelho
+- [ ] RN0017
+
+### Grupo Cadastro de Clientes
+- [ ] Criar página de Cadastro de Cliente
+    - [ ] RNF0031 
+    - [ ] RNF0032 
+    - [ ] RNF0033 -> enviar apenas o hash para o servidor
+    - [ ] RNF0034 -> botão dedicado para alteração de tais campos
+- [ ] Criar página de Perfil de Cliente
+    - [ ] RN0022
+    - [ ] RN0028 -> Pop-up de alteração de senha
+- [ ] RN0021
+- [ ] RN0022
+- [ ] RN0023
+- [ ] RN0024
+- [ ] RN0026
+- [ ] RN0027 -> Criar uma pontuação e exibir no menu do cliente (avatar vtiger)
+
+### Gerenciar Vendas Eletrônicas
+- [ ] Criar página Carrinho de Compras
+    - [ ] RF0031
+    - [ ] RF0032
+    - [ ] RF0033
+    - [ ] RF0034
+    - [ ] RF0035
+    - [ ] RF0036
+    - [ ] RF0037
+- [ ] Criar página Detalhes Venda
+- [ ] RN0031
+- [ ] RN0032 -> Refazer consulta de disponibilidade dos itens do carrinho
+- [ ] RN0033
+- [ ] RN0034
+- [ ] RN0035
+
+### Grupo de Estoque
+- [ ] Criar página de Entrada no Estoque
+- [ ] Criar página de Detalhes Entrada no Estoque
+- [ ] RN0051 -> Criar os campos e deixar como obrigatórios no front-end
+- [ ] Criar campos para: categorias (rel), grupo de precificação (rel), código de barras na página do RN0051
+- [ ] RN0061 -> Forçar no front-end
+- [ ] RN0062 -> Deixar obrigatório no front-end
+- [ ] RN0064 -> Forçar no front-end
+
+## Outros
 - [ ] Adicionar Mecânica de Carrinho com produtos salvos localmente no navegador do cliente
 - [ ] Fazer o componente de pesquisa realmente funcionar (antes de depender do CRUD)
 
-
-## Outros
+# Outros
 - [ ] Adicionar mais opções de categorias
 - [ ] Testes com Selenium
 
