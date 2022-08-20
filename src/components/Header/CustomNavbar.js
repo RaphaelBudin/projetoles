@@ -18,13 +18,18 @@ export default function CustomNavbar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           
           <Nav className="me-auto">
-            <Nav.Link href="#features">Todos os Livros</Nav.Link>
-            <Nav.Link href="#pricing">Lançamentos</Nav.Link>
+            <Nav.Link href="#todos-livros">Todos os Livros</Nav.Link>
+            <Nav.Link href="#lancamentos">Lançamentos</Nav.Link>
 
             <NavDropdown title="Categorias" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Programação</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Culinária</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Paisagismo</NavDropdown.Item>
+              <NavDropdown.Item href="#todos-livros/java">Java</NavDropdown.Item>
+              <NavDropdown.Item href="#todos-livros/ruby">Ruby</NavDropdown.Item>
+              <NavDropdown.Item href="#todos-livros/geral">Geral</NavDropdown.Item>
+            </NavDropdown>
+
+            <NavDropdown title="Cadastros" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#cadastro-livro">Cadastro Livro</NavDropdown.Item>
+              <NavDropdown.Item href="#cadastro-cliente">Cadastro Cliente</NavDropdown.Item>
             </NavDropdown>
           </Nav>
 

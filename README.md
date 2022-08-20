@@ -62,6 +62,7 @@ Projeto de E-commerce para atender a disciplina de Laboratório de Engenharia de
 
 # Outros
 - [ ] Adicionar mais opções de categorias
+- [ ] Colocar 'keys' nos mapeamentos (boas práticas)
 - [ ] Testes com Selenium
 
 # Requisitos FUNCIONAIS
