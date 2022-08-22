@@ -2,13 +2,16 @@ import "./CadastroLivro.css";
 import { React, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import Categorias from "../../components/tags/categorias/Categorias";
 
+/*
 const categorias = [
   {label: "Java", value:"Java"},
   {label: "Ruby", value:"Ruby"},
   {label: "Geral", value:"Geral"},
 ];
 const listCategorias = categorias.map((categoria) => {return <option> {categoria.label} </option>})
+*/
 
 const gruposPrecificacao = [
   {label: "Produção Própria", value:"prod-propria"},
@@ -18,18 +21,11 @@ const gruposPrecificacao = [
 const listGruposPrecificacao = gruposPrecificacao.map((grupo) => {return <option> {grupo.label} </option>})
 
 export default function CadastroLivro(){
-  const [categorias, setCategorias] = useState([]);
 
   function submitHandler(event) {
     event.preventDefault();
     alert('Produto cadastrado com sucesso!');
   }
-
-  function onSelectedOptionsChange(event){
-    //console.log(event.target.value);
-    setCategorias(prevState => [...prevState, event.target.value]);
-  }
-
 
   return (
     <Form onSubmit={submitHandler} className="">
@@ -45,12 +41,9 @@ export default function CadastroLivro(){
         <Form.Control type="text" placeholder="Autor do livro" required />
       </Form.Group>
 
-      <Form.Group className="input" controlId="formCategorias">
-        <Form.Label>Categorias:</Form.Label>
-        <Form.Control as="select" multiple onChange={onSelectedOptionsChange} required>
-          {listCategorias}
-        </Form.Control>
-        <Form.Text>Segure Ctrl ou Shift para selecionar mais de um valor</Form.Text>
+      <Form.Group className="input" controlId="formCategorais">
+        <Form.Label> Categorias:</Form.Label>
+        <Categorias/>
       </Form.Group>
 
       <Form.Group className="input" controlId="formAno">
@@ -106,7 +99,7 @@ export default function CadastroLivro(){
 
       <Form.Group className="input" controlId="formGrupoPrecificacao">
         <Form.Label>Grupo de Precificação:</Form.Label>
-        <Form.Control as="select" multiple onChange={onSelectedOptionsChange} required>
+        <Form.Control as="select" multiple required>
           {listGruposPrecificacao}
         </Form.Control>
         <Form.Text>Segure Ctrl ou Shift para selecionar mais de um valor</Form.Text>
@@ -121,3 +114,18 @@ export default function CadastroLivro(){
     </Form>
   );
 }
+
+/*
+
+<Form.Group className="input" controlId="formCategorias">
+        <Form.Label>Categorias:</Form.Label>
+        <Form.Control as="select" multiple onChange={onSelectedOptionsChange} required>
+          {listCategorias}
+        </Form.Control>
+        <Form.Text>Segure Ctrl ou Shift para selecionar mais de um valor</Form.Text>
+      </Form.Group>
+
+
+
+
+*/
