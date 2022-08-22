@@ -1,0 +1,17 @@
+.centralizado {
+    text-align: center;
+}
+
+.input {
+    margin-left: 20px;
+    max-width: 90%;
+}
+
+.text-area{
+    border-color: gray;
+    border-radius: 5px;
+}
+
+.botao-submit{
+    margin-bottom: 20px;
+}

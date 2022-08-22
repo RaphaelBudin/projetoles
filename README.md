@@ -7,7 +7,7 @@ Projeto de E-commerce para atender a disciplina de Laboratório de Engenharia de
 ### Página Inicial, Navbar e Footer
 - [ ] Adicionar Login/Avatar 
 ### Grupo Livros
-- [ ] Fazer página de Cadastro de Livros
+- [x] Fazer página de Cadastro de Livros
 - [ ] Fazer página de Detalhe do Livro
 - [ ] RN0011
 - [ ] RN0012 

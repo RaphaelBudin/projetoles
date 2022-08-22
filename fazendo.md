@@ -1,7 +1,8 @@
-Arquivo para gerenciar o que estou fazendo no momento:
+Pendências ou ajustes póstumos por página:
 
 # Página de Cadastro de Livros
-- [ ] Rotear link da navbar para renderizar a página em questão
-- [ ] Criar todos os campos
-- [ ] Implantar máscara de campos
-- [ ] Implantar validação de dados
+- [x] Rotear link da navbar para renderizar a página em questão
+- [x] Criar todos os campos
+- [ ] Forçar apenas duas casas decimais: Altura, Largura, Profundidade
+- [ ] Criar sistema de tags em Categorias e Grupo de Precificação (https://dev.to/0shuvo0/lets-create-an-add-tags-input-with-react-js-d29)
+

@@ -6,7 +6,6 @@ import Header from "../components/Header/Header";
 export default function Home() {
   return (
     <div className="home">
-      <Header />
       <Body />
       <footer>
         <br/><br/><br/><br/>

@@ -5,31 +5,37 @@ import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { Link } from "react-router-dom";
 
 export default function CustomNavbar() {
+  function clickHandler(event){
+    event.preventDefault();
+  }
+
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       
       <Container fluid>
-        
-        <Navbar.Brand href="#home">Projeto LES</Navbar.Brand>
-        
+
+        <Link to="/" className="link brand"> PROJETO LES </Link>    
+
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           
           <Nav className="me-auto">
-            <Nav.Link href="/todos-livros">Todos os Livros</Nav.Link>
-            <Nav.Link href="/lancamentos">Lançamentos</Nav.Link>
+            <Link to="/mais-vendidos" className="link main-link">Mais Vendidos</Link>
+            <Link to="/lancamentos" className="link main-link">Lançamentos</Link>
 
             <NavDropdown title="Categorias" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="/todos-livros/java">Java</NavDropdown.Item>
-              <NavDropdown.Item href="/todos-livros/ruby">Ruby</NavDropdown.Item>
-              <NavDropdown.Item href="/todos-livros/geral">Geral</NavDropdown.Item>
+              <Link to="/categorias/java" className="dropdown-link"> Java </Link> <br/>
+              <Link to="/categorias/java" className="dropdown-link"> Ruby </Link> <br/>
+              <Link to="/categorias/java" className="dropdown-link"> Geral</Link> <br/>
             </NavDropdown>
 
             <NavDropdown title="Cadastros" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="/cadastro-livro">Cadastro Livro</NavDropdown.Item>
-              <NavDropdown.Item href="/cadastro-cliente">Cadastro Cliente</NavDropdown.Item>
+            <Link to="/cadastro/livro" className="dropdown-link"> Cadastro Livro </Link> <br/>
+            <Link to="/cadastro/cliente" className="dropdown-link"> Cadastro Cliente </Link> <br/>
+              
             </NavDropdown>
           </Nav>
 
@@ -47,3 +53,16 @@ export default function CustomNavbar() {
     </Navbar>
   );
 }
+
+/*
+        <Navbar.Brand href="/" >Projeto LES</Navbar.Brand>
+
+
+<NavDropdown.Item href="/todos-livros/java">Java</NavDropdown.Item>
+<NavDropdown.Item href="/todos-livros/ruby">Ruby</NavDropdown.Item>
+<NavDropdown.Item href="/todos-livros/geral">Geral</NavDropdown.Item>
+
+<NavDropdown.Item href="/cadastro-livro">Cadastro Livro</NavDropdown.Item>
+<NavDropdown.Item href="/cadastro-cliente">Cadastro Cliente</NavDropdown.Item>
+
+*/

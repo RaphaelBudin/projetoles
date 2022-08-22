@@ -1,3 +1,30 @@
 .barra-pesquisa {
     width: 160px;
 }
+
+.link {
+    color: #999;
+    font-style: normal;
+    text-decoration: solid;
+    margin: auto;
+}
+
+.link:hover{
+    color: azure;
+}
+
+.brand {
+    font-size: large;
+    font-weight: bold;
+}
+
+.main-link {
+    margin: auto 10px;
+}
+
+.dropdown-link {
+    color: #888;
+    font-size: medium;
+    font-style: normal;
+    text-decoration: solid;
+}
