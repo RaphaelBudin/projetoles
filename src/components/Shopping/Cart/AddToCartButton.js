@@ -6,19 +6,12 @@ import Modal from "react-bootstrap/Modal";
 
 export default function AddToCartButton(props) {
   const [show, setShow] = useState(false);
-  const [produto, setProduto] = useState({titulo:'', autor:'', url:'', altura:'', largura:''});
 
   function handleClose() {setShow(false);}
   function handleShow() {setShow(true);}
 
-  useEffect(() => {
-    console.log("Produto a ser adicionado: ");
-    console.log(produto);
-    props.adicionarCarrinho(produto);
-  }, [produto]);
-
   function clickHandler() {
-    setProduto({titulo:props.titulo, autor:props.autor, url:props.url, altura:props.height, largura:props.width});
+    props.adicionarCarrinho({titulo:props.titulo, autor:props.autor, url:props.url, altura:props.height, largura:props.width});
     handleShow();
   }
 

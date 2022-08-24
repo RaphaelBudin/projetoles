@@ -6,6 +6,7 @@ import CadastroLivro from "./pages/livro/CadastroLivro";
 import PageLancamentos from "./pages/lancamentos/PageLancamentos";
 import PageMaisVendidos from "./pages/mais-vendidos/PageMaisVendidos";
 import PageCadastroCliente from "./pages/cliente/PageCadastroCliente";
+import PageCarrinhoCompras from "./pages/carrinho/PageCarrinhoCompras";
 
 
 function App() {
@@ -32,12 +33,22 @@ function App() {
         <Route exact path="livro" element={<CadastroLivro />} />
         <Route exact path="cliente" element={<PageCadastroCliente/>} />
       </Route>
-      <Route exact path="/mais-vendidos" element={<PageMaisVendidos adicionarCarrinho={adicionarCarrinho}/>} />
+      
+      <Route exact path="/mais-vendidos" element={
+          <PageMaisVendidos 
+            adicionarCarrinho={adicionarCarrinho}/>} />
+      
       <Route exact path="/lancamentos" element={<PageLancamentos/>} />
+      
+      <Route exact path="/carrinho-compras" element={
+          <PageCarrinhoCompras 
+            itensCarrinho={itensCarrinho} />} />
+      
       <Route exact path="/" element={<Home 
           adicionarCarrinho={adicionarCarrinho}
-          numProdutos={itensCarrinho.length-1}
+          numProdutos={itensCarrinho.length}
           />} />
+    
     </Routes>
     </BrowserRouter>    
     </>

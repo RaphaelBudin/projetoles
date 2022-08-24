@@ -14,4 +14,5 @@ Pendências ou ajustes póstumos por página:
 
 # Geral
 - [x] Mudar CustomNavbar para o App.js ao invés do index.js
-- [ ] Mudar Routing para App.js ao invés do index.js
+- [x] Mudar Routing para App.js ao invés do index.js
+- [ ] Usar LocalStorage para persistir produtos adicionados ao carrinho

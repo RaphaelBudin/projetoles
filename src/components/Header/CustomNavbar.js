@@ -1,4 +1,5 @@
 import "./CustomNavbar.css";
+import {useNavigate} from 'react-router-dom';
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -9,6 +10,7 @@ import { Link } from "react-router-dom";
 import ImgCarrinhoCompras from '../../public/CarrinhoCompras.png';
 
 export default function CustomNavbar(props) {
+  const navigate = useNavigate();
   function clickHandler(event){
     event.preventDefault();
   }
@@ -40,7 +42,7 @@ export default function CustomNavbar(props) {
             
           </Nav>
 
-          <div className="carrinho-compras">
+          <div className="carrinho-compras" onClick={()=>{navigate('/carrinho-compras')}}>
             <img 
               src={ImgCarrinhoCompras}
               height="40"
