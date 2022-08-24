@@ -10,4 +10,7 @@ Pendências ou ajustes póstumos por página:
     - [ ] Mostrar na Página Inicial em Livros Cadastrados 
 
 # HOME
-- [ ] Mudar botões do Popup de adição ao carrinho: colocar "Continuar Navegação" e "Ir para Carrinho"
+- [x] Mudar botões do Popup de adição ao carrinho: colocar "Continuar Navegação" e "Ir para Carrinho"
+
+# Geral
+- [ ] Mudar CustomNavbar para o App.js ao invés do index.js

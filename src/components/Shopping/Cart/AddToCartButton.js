@@ -51,7 +51,7 @@ export default function AddToCartButton(props) {
         <Modal.Body>Produto adicionado ao carrinho com sucesso!</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Fechar
+            Ir para Carrinho
           </Button>
           <Button variant="primary" onClick={handleClose}>
             Continuar Navegação
