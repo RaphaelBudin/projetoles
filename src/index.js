@@ -8,6 +8,7 @@ import CadastroLivro from "./pages/livro/CadastroLivro";
 import PageLancamentos from "./pages/lancamentos/PageLancamentos";
 import PageMaisVendidos from "./pages/mais-vendidos/PageMaisVendidos";
 import PageCadastroCliente from "./pages/cliente/PageCadastroCliente";
+import Estado from "./Estado";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

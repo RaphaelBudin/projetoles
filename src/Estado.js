@@ -1,9 +1,6 @@
-import "./App.css";
-import React, {useEffect, useState} from "react";
-import Home from "./pages/Home";
-import CustomNavbar from "./components/Header/CustomNavbar";
+import {useState, useEffect} from 'react';
 
-function App(props) {
+export default function Estado(){
   //Variáveis que serão utilizados no Mock  
   //Itens do carrinho
   const [itensCarrinho, setItensCarrinho] = useState([]);
@@ -15,13 +12,5 @@ function App(props) {
   function adicionarCarrinho(produto){
     console.log("Adicionando ao carrinho...App.js");
     setItensCarrinho([...itensCarrinho, produto]);
-  };
-
-  return (
-    <>
-      <Home adicionarCarrinho={props.adicionarCarrinho}/>
-    </>
-  );
+  }
 }
-
-export default App;

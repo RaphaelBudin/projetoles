@@ -5,7 +5,6 @@ import CustomNavbar from '../../components/Header/CustomNavbar';
 export default function PageMaisVendidos(){
     return (
         <>
-            <MaisVendidos/>
             <CustomNavbar/>
         </>
     );
