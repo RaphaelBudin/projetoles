@@ -35,7 +35,7 @@ export default function MaisVendidos(props) {
   ];
   const listLivros = livros.map((livro) => {
     return (
-      <Col className="info-livros" key={livro.titulo}>
+      <Col className="info-livros centralizado" key={livro.titulo}>
         <p className="titulo">    {livro.titulo} </p>
         <p className="autor"> <i> {livro.autor} </i> </p>
         <p className="preco">     {livro.preco} </p>
@@ -57,8 +57,9 @@ export default function MaisVendidos(props) {
 
   return (
     <>
-      <h1> Mais Vendidos </h1>
-      <br /> <br />
+      <br />
+      <h1 className="centralizado"> Mais Vendidos </h1>
+      <br />
       <Row>{listLivros}</Row>
     </>
   );

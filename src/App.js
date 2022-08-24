@@ -1,10 +1,16 @@
 import "./App.css";
 import React, {useEffect, useState} from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import CadastroLivro from "./pages/livro/CadastroLivro";
+import PageLancamentos from "./pages/lancamentos/PageLancamentos";
+import PageMaisVendidos from "./pages/mais-vendidos/PageMaisVendidos";
+import PageCadastroCliente from "./pages/cliente/PageCadastroCliente";
+
 
 function App() {
   //Variáveis que serão utilizados no Mock  
+
   //Itens do carrinho
   const [itensCarrinho, setItensCarrinho] = useState([]);
 
@@ -20,7 +26,17 @@ function App() {
 
   return (
     <>
-    <Home adicionarCarrinho={adicionarCarrinho}/>
+    <BrowserRouter>
+    <Routes>
+      <Route path="cadastro" element={<CadastroLivro />}>
+        <Route exact path="livro" element={<CadastroLivro />} />
+        <Route exact path="cliente" element={<PageCadastroCliente/>} />
+      </Route>
+      <Route exact path="/mais-vendidos" element={<PageMaisVendidos adicionarCarrinho={adicionarCarrinho}/>} />
+      <Route exact path="/lancamentos" element={<PageLancamentos/>} />
+      <Route exact path="/" element={<Home adicionarCarrinho={adicionarCarrinho}/>} />
+    </Routes>
+    </BrowserRouter>    
     </>
   );
 }
