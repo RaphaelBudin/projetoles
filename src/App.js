@@ -1,25 +1,26 @@
 import "./App.css";
 import React, {useEffect, useState} from "react";
 import Home from "./pages/Home";
-import CustomNavbar from "./components/Header/CustomNavbar";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-function App(props) {
+function App() {
   //Variáveis que serão utilizados no Mock  
   //Itens do carrinho
   const [itensCarrinho, setItensCarrinho] = useState([]);
+
   useEffect(()=>{
     console.log("Itens atualmente no carrinho: ");
     console.log(itensCarrinho);
   }, [itensCarrinho]);
 
   function adicionarCarrinho(produto){
-    console.log("Adicionando ao carrinho...App.js");
+    console.log("Adicionando ao carrinho...App");
     setItensCarrinho([...itensCarrinho, produto]);
   };
 
   return (
     <>
-      <Home adicionarCarrinho={props.adicionarCarrinho}/>
+    <Home adicionarCarrinho={adicionarCarrinho}/>
     </>
   );
 }
