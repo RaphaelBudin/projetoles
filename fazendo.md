@@ -1,6 +1,6 @@
 Pendências ou ajustes póstumos por página:
 
-# Página de Cadastro de Livros
+# Cadastro de Livros
 - [x] Rotear link da navbar para renderizar a página em questão
 - [x] Criar todos os campos
 - [ ] Forçar apenas duas casas decimais: Altura, Largura, Profundidade
@@ -8,3 +8,6 @@ Pendências ou ajustes póstumos por página:
 - [ ] Fazer sistema de pesquisa de Autores cadastrados (mockados a princípio)
 - [ ] Cadastrar o livro nas Props
     - [ ] Mostrar na Página Inicial em Livros Cadastrados 
+
+# HOME
+- [ ] Mudar botões do Popup de adição ao carrinho: colocar "Continuar Navegação" e "Ir para Carrinho"
