@@ -13,4 +13,5 @@ Pendências ou ajustes póstumos por página:
 - [x] Mudar botões do Popup de adição ao carrinho: colocar "Continuar Navegação" e "Ir para Carrinho"
 
 # Geral
-- [ ] Mudar CustomNavbar para o App.js ao invés do index.js
+- [x] Mudar CustomNavbar para o App.js ao invés do index.js
+- [ ] Mudar Routing para App.js ao invés do index.js
