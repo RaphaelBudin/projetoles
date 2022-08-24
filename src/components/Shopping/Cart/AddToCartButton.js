@@ -3,11 +3,17 @@ import Logo from "../../../public/cart-icon-transparent.png";
 import { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import { useNavigate } from "react-router-dom";
 
 export default function AddToCartButton(props) {
   const [show, setShow] = useState(false);
+  const navigate = useNavigate();
 
   function handleClose() {setShow(false);}
+  function handleCloseCarrinho(){
+    handleClose();
+    navigate('/carrinho-compras');  
+  }
   function handleShow() {setShow(true);}
 
   function clickHandler() {
@@ -43,7 +49,7 @@ export default function AddToCartButton(props) {
         </Modal.Header>
         <Modal.Body>Produto adicionado ao carrinho com sucesso!</Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="secondary" onClick={handleCloseCarrinho}>
             Ir para Carrinho
           </Button>
           <Button variant="primary" onClick={handleClose}>
