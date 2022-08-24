@@ -6,8 +6,9 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
+import ImgCarrinhoCompras from '../../public/CarrinhoCompras.png';
 
-export default function CustomNavbar() {
+export default function CustomNavbar(props) {
   function clickHandler(event){
     event.preventDefault();
   }
@@ -38,6 +39,15 @@ export default function CustomNavbar() {
               
             </NavDropdown>
           </Nav>
+
+          <div className="carrinho-compras">
+            <img 
+              src={ImgCarrinhoCompras}
+              height="40"
+              width="40"
+            />
+            
+          </div>
 
           <Form className="d-flex">
             <Form.Control

@@ -25,7 +25,7 @@ export default function Categorias () {
                     <span className="close" onClick={() => removeTag(index)}>&times;</span>
                 </div>
             )) }
-            <input onKeyDown={handleKeyDown} type="text" className="tags-input" placeholder="Aperte Enter para inserir Categoria" />
+            <input onKeyDown={handleKeyDown} type="text" className="tags-input" placeholder="Aperte Enter para inserir Categoria" required/>
         </div>
     )
 }

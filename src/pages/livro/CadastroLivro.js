@@ -3,42 +3,66 @@ import { React, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Categorias from "../../components/tags/categorias/Categorias";
+import GrupoPrecificacao from "../../components/tags/grupo-precificacao/GrupoPrecificacao";
+import FormAutor from "../../components/autores/FormAutor";
 
-/*
-const categorias = [
-  {label: "Java", value:"Java"},
-  {label: "Ruby", value:"Ruby"},
-  {label: "Geral", value:"Geral"},
-];
-const listCategorias = categorias.map((categoria) => {return <option> {categoria.label} </option>})
-*/
-
-const gruposPrecificacao = [
-  {label: "Produção Própria", value:"prod-propria"},
-  {label: "Revenda", value:"revenda"},
-  {label: "Consórcio", value:"consorcio"},
-];
-const listGruposPrecificacao = gruposPrecificacao.map((grupo) => {return <option> {grupo.label} </option>})
+const autores = ["Selecione um autor", "Autor1", "Autor2", "Autor3"];
 
 export default function CadastroLivro(){
+  const [classe, setClasse] = useState('');
+  const [autorValido, setAutorValido] = useState(false);
 
   function submitHandler(event) {
     event.preventDefault();
-    alert('Produto cadastrado com sucesso!');
+    alert('Livro cadastrado com sucesso!');
+    //ID do livro será o próprio ISBN
   }
+
+  function validaAutor(event){
+    console.log(event);
+    if (event.target.value === 'Selecione um autor') {
+        setAutorValido(false);
+        invalidaInput(event);
+    }
+    setAutorValido(true);
+  }
+
+  function invalidaInput(event){
+    setClasse("invalida");
+  }
+
+  function validaInput(event){
+    setClasse("");
+  }
+
 
   return (
     <Form onSubmit={submitHandler} className="">
       <br/>
       <h1 className="centralizado"> Cadastro Livro </h1> 
+
       <Form.Group className="input" controlId="formTitulo">  
         <Form.Label>Titulo:</Form.Label>
         <Form.Control type="text" placeholder="Título do livro" required />
       </Form.Group>
 
       <Form.Group className="input" controlId="formAutor">
-        <Form.Label>Autor:</Form.Label>
-        <Form.Control type="text" placeholder="Autor do livro" required />
+        <Form.Label>Autor: </Form.Label>
+        <Form.Select aria-label="Selecione o autor:" onChange={validaAutor} required className={classe} key={autores} id="autor">
+          {autores.map(autor => 
+            <option value={autor}>{autor}</option>
+            )};
+        </Form.Select>
+      </Form.Group>
+
+      <Form.Group className="input" controlId="formCapa">
+        <Form.Label> Capa </Form.Label>
+        <Form.Control type="file"/>
+      </Form.Group>
+
+      <Form.Group className="input" controlId="formContraCapa">
+        <Form.Label> Contra-Capa </Form.Label>
+        <Form.Control type="file"/>
       </Form.Group>
 
       <Form.Group className="input" controlId="formCategorais">
@@ -58,7 +82,7 @@ export default function CadastroLivro(){
 
       <Form.Group className="input" controlId="formEdição">
         <Form.Label>Edição:</Form.Label>
-        <Form.Control type="number" min="1" placeholder="Edição do livro" />
+        <Form.Control type="number" min="1" placeholder="Edição do livro" required/>
       </Form.Group>
 
       <Form.Group className="input" controlId="formISBN">
@@ -99,33 +123,15 @@ export default function CadastroLivro(){
 
       <Form.Group className="input" controlId="formGrupoPrecificacao">
         <Form.Label>Grupo de Precificação:</Form.Label>
-        <Form.Control as="select" multiple required>
-          {listGruposPrecificacao}
-        </Form.Control>
+          <GrupoPrecificacao/> 
         <Form.Text>Segure Ctrl ou Shift para selecionar mais de um valor</Form.Text>
-      </Form.Group>
+      </Form.Group>   
       
       <Form.Group className="centralizado botao-submit">
         <Button variant="primary" type="submit" onSubmit={submitHandler}>
           Cadastrar
         </Button>
       </Form.Group>
-  
     </Form>
   );
 }
-
-/*
-
-<Form.Group className="input" controlId="formCategorias">
-        <Form.Label>Categorias:</Form.Label>
-        <Form.Control as="select" multiple onChange={onSelectedOptionsChange} required>
-          {listCategorias}
-        </Form.Control>
-        <Form.Text>Segure Ctrl ou Shift para selecionar mais de um valor</Form.Text>
-      </Form.Group>
-
-
-
-
-*/

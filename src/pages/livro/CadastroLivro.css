@@ -15,3 +15,8 @@
 .botao-submit{
     margin-bottom: 20px;
 }
+
+.invalidop {
+    border-width: 5px;
+    border-color: red;
+}

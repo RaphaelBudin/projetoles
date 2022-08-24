@@ -1,44 +1,63 @@
 import "./AddToCartButton.css";
 import Logo from "../../../public/cart-icon-transparent.png";
+import { useState, useEffect } from "react";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 
 export default function AddToCartButton(props) {
+  const [show, setShow] = useState(false);
+  const [produto, setProduto] = useState({titulo:'', autor:'', url:'', altura:'', largura:''});
+
+  function handleClose() {setShow(false);}
+  function handleShow() {setShow(true);}
+
+  useEffect(() => {
+    console.log("Produto a ser adicionado: ");
+    console.log(produto);
+    props.adicionarCarrinho(produto);
+  }, [produto]);
+
   function clickHandler() {
-    alert("Produto Adicionado com sucesso!");
+    setProduto({titulo:props.titulo, autor:props.autor, url:props.url, altura:props.height, largura:props.width});
+    handleShow();
   }
 
-  //Adiciona os dados no carrinho de compras
-  function submitHandler(event){
-    //Previne que a página seja recarregada
+  function submitHandler(event) {
     event.preventDefault();
-    
-    /*Cria uma variável que armazenará todas as informações do produto:
-        Título
-        Autor
-        Valor
-        Categoria
-        Preco
-        URL
-    */
-   const produto = [];
-
   }
 
   return (
-    <button onSubmit={submitHandler} className="button">
-      <figure onClick={clickHandler} >
-        <img
-          src={Logo}
-          alt="Adicione este produto ao carrinho!"
-          width="50"
-          height="50"
-        />
-        <figcaption>
-        <u  className="text-carrinho"> Adicionar ao Carrinho </u>
-        </figcaption>
-      </figure>
-      <br />
-      <br />
-      <br />
-    </button>
+    <>
+      <button onSubmit={submitHandler} className="button">
+        <figure onClick={clickHandler}>
+          <img
+            src={Logo}
+            alt="Adicione este produto ao carrinho!"
+            width="50"
+            height="50"
+          />
+          <figcaption>
+            <u className="text-carrinho"> Adicionar ao Carrinho </u>
+          </figcaption>
+        </figure>
+        <br />
+        <br />
+        <br />
+      </button>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Produto Adicionado</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Produto adicionado ao carrinho com sucesso!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Fechar
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Continuar Navegação
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
   );
 }

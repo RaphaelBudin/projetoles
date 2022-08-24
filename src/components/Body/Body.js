@@ -4,14 +4,14 @@ import Lancamentos from "./Lancamentos/Lancamentos";
 import Container from "react-bootstrap/Container";
 import MaisVendidos from "./MaisVendidos/MaisVendidos";
 
-export default function Body() {
+export default function Body(props) {
   return (
     <Container fluid>
         <Lancamentos/>
         <br/>
         <br/>
         <br/>
-        <MaisVendidos/>
+        <MaisVendidos adicionarCarrinho={props.adicionarCarrinho}/>
     </Container>
     
   );
