@@ -6,10 +6,6 @@ import AddToCartButton from "../../Shopping/Cart/AddToCartButton";
 import {useState} from 'react';
 
 export default function MaisVendidos(props) {
-  const [numLivros, setNumLivros] = useState(0);
-  function getNumLivros(){
-    return {numLivros};
-  }
 
   const livros = [
     {
@@ -54,8 +50,6 @@ export default function MaisVendidos(props) {
           url={livro.url}
           height="250"
           width="250"
-          numLivros={getNumLivros}
-          setNumLivros={setNumLivros}
         />
       </Col>
     );

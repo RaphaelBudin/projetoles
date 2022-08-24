@@ -29,15 +29,15 @@ export default function CustomNavbar(props) {
 
             <NavDropdown title="Categorias" id="collasible-nav-dropdown">
               <Link to="/categorias/java" className="dropdown-link"> Java </Link> <br/>
-              <Link to="/categorias/java" className="dropdown-link"> Ruby </Link> <br/>
-              <Link to="/categorias/java" className="dropdown-link"> Geral</Link> <br/>
+              <Link to="/categorias/ruby" className="dropdown-link"> Ruby </Link> <br/>
+              <Link to="/categorias/geral" className="dropdown-link"> Geral</Link> <br/>
             </NavDropdown>
 
             <NavDropdown title="Cadastros" id="collasible-nav-dropdown">
-            <Link to="/cadastro/livro" className="dropdown-link"> Cadastro Livro </Link> <br/>
-            <Link to="/cadastro/cliente" className="dropdown-link"> Cadastro Cliente </Link> <br/>
-              
+              <Link to="/cadastro/livro" className="dropdown-link"> Cadastro Livro </Link> <br/>
+              <Link to="/cadastro/cliente" className="dropdown-link"> Cadastro Cliente </Link> <br/>
             </NavDropdown>
+            
           </Nav>
 
           <div className="carrinho-compras">

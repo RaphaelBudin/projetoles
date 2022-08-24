@@ -75,7 +75,7 @@ export default function Lancamentos() {
   return (
     <React.Fragment>
       <br/>
-      <h1> Últimos Lançamentos </h1>
+      <h1 className="centralizado"> Últimos Lançamentos </h1>
       <Carousel className="container" variant="dark" interval={1500}>
         {listLancamentos}
       </Carousel>

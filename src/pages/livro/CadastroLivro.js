@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form";
 import Categorias from "../../components/tags/categorias/Categorias";
 import GrupoPrecificacao from "../../components/tags/grupo-precificacao/GrupoPrecificacao";
 import FormAutor from "../../components/autores/FormAutor";
+import CustomNavbar from "../../components/Header/CustomNavbar";
 
 const autores = ["Selecione um autor", "Autor1", "Autor2", "Autor3"];
 
@@ -37,6 +38,8 @@ export default function CadastroLivro(){
 
 
   return (
+    <>
+    <CustomNavbar/>
     <Form onSubmit={submitHandler} className="">
       <br/>
       <h1 className="centralizado"> Cadastro Livro </h1> 
@@ -133,5 +136,6 @@ export default function CadastroLivro(){
         </Button>
       </Form.Group>
     </Form>
+    </>
   );
 }
