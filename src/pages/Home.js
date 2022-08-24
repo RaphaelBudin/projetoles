@@ -8,7 +8,7 @@ import CustomNavbar from "../components/Header/CustomNavbar";
 export default function Home(props) {
   return (
     <>
-      <CustomNavbar/>
+      <CustomNavbar numProdutos={props.numProdutos}/>
       <div className="home">
         <Body adicionarCarrinho={props.adicionarCarrinho}/>
         <footer>

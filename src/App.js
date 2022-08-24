@@ -34,7 +34,10 @@ function App() {
       </Route>
       <Route exact path="/mais-vendidos" element={<PageMaisVendidos adicionarCarrinho={adicionarCarrinho}/>} />
       <Route exact path="/lancamentos" element={<PageLancamentos/>} />
-      <Route exact path="/" element={<Home adicionarCarrinho={adicionarCarrinho}/>} />
+      <Route exact path="/" element={<Home 
+          adicionarCarrinho={adicionarCarrinho}
+          numProdutos={itensCarrinho.length-1}
+          />} />
     </Routes>
     </BrowserRouter>    
     </>

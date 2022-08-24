@@ -46,7 +46,7 @@ export default function CustomNavbar(props) {
               height="40"
               width="40"
             />
-            
+            <span className="contagem-produtos">{props.numProdutos}</span>
           </div>
 
           <Form className="d-flex">
