@@ -31,6 +31,8 @@
 
 .carrinho-compras{
     margin: 0px 25px;
+    background-color: transparent;
+    border-width: 0px;
 }
 
 .contagem-produtos{

@@ -1,6 +1,6 @@
 import "./AddToCartButton.css";
 import Logo from "../../../public/cart-icon-transparent.png";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useNavigate } from "react-router-dom";
@@ -17,7 +17,7 @@ export default function AddToCartButton(props) {
   function handleShow() {setShow(true);}
 
   function clickHandler() {
-    props.adicionarCarrinho({titulo:props.titulo, autor:props.autor, url:props.url, altura:props.height, largura:props.width});
+    props.adicionarCarrinho({titulo:props.titulo, autor:props.autor, preco:props.preco, url:props.url, altura:props.height, largura:props.width});
     handleShow();
   }
 

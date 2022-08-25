@@ -1,3 +1,11 @@
 .centralizado {
     text-align: center;
 }
+
+.info-livros {
+    border-width: 5px;
+}
+
+.excluir-produto {
+    background-color: darkred;
+}

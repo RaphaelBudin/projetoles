@@ -42,14 +42,14 @@ export default function CustomNavbar(props) {
             
           </Nav>
 
-          <div className="carrinho-compras" onClick={()=>{navigate('/carrinho-compras')}}>
+          <button className="carrinho-compras" onClick={()=>{navigate('/carrinho-compras')}}>
             <img 
               src={ImgCarrinhoCompras}
               height="40"
               width="40"
             />
             <span className="contagem-produtos">{props.numProdutos}</span>
-          </div>
+          </button>
 
           <Form className="d-flex">
             <Form.Control

@@ -8,7 +8,6 @@ import PageMaisVendidos from "./pages/mais-vendidos/PageMaisVendidos";
 import PageCadastroCliente from "./pages/cliente/PageCadastroCliente";
 import PageCarrinhoCompras from "./pages/carrinho/PageCarrinhoCompras";
 
-
 function App() {
   //Variáveis que serão utilizados no Mock  
 
@@ -21,9 +20,16 @@ function App() {
   }, [itensCarrinho]);
 
   function adicionarCarrinho(produto){
-    console.log("Adicionando ao carrinho...App");
+    console.log("Adicionando ao carrinho...");
     setItensCarrinho([...itensCarrinho, produto]);
   };
+
+  function removerCarrinho(produto){
+    console.log("Removendo do carrinho...");
+    setItensCarrinho(
+      (itensCarrinho.filter((item) => {return item!=produto}))
+    );
+  }
 
   return (
     <>
@@ -42,7 +48,10 @@ function App() {
       
       <Route exact path="/carrinho-compras" element={
           <PageCarrinhoCompras 
-            itensCarrinho={itensCarrinho} />} />
+            itensCarrinho={itensCarrinho} 
+            numProdutos={itensCarrinho.length}
+            removerCarrinho={removerCarrinho}
+            />} />
       
       <Route exact path="/" element={<Home 
           adicionarCarrinho={adicionarCarrinho}
