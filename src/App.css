@@ -1,3 +1,20 @@
 .App {
   text-align: center;
 }
+
+.focus {
+  border-width: 10px;
+  border-color: red;
+}
+
+.margem-acima-p {
+  margin-top: 25px;
+}
+
+.margem-acima-m {
+  margin-top: 50px;
+}
+
+.margem-acima-g {
+  margin-top: 75px;
+}

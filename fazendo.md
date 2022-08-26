@@ -11,8 +11,19 @@ Pendências ou ajustes póstumos por página:
 
 # HOME
 - [x] Mudar botões do Popup de adição ao carrinho: colocar "Continuar Navegação" e "Ir para Carrinho"
+# Carrinho
+- [ ] Agregar os livros iguais
+- [ ] Opção para alterar a quantidade de cada produto
+- [ ] Inserir campo de CEP
+
+# Pagamento
+
+# Processamento
+- [ ] Gerar ID do Pedido de forma aleatória (pegar estado do App.js)
+- [ ] Informar resumo das compras
 
 # Geral
 - [x] Mudar CustomNavbar para o App.js ao invés do index.js
 - [x] Mudar Routing para App.js ao invés do index.js
+- [ ] Fazer sistema de cadastro de usuários
 - [ ] Usar LocalStorage para persistir produtos adicionados ao carrinho

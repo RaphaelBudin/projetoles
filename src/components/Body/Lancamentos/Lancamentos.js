@@ -55,7 +55,8 @@ const lancamentos = [
   },
 ]
 const listLancamentos = lancamentos.map((livro) => {
-    return (<Carousel.Item>
+    return (
+    <Carousel.Item key={livro.id}>
       <Livro
         id={livro.id} 
         titulo={livro.titulo}

@@ -9,3 +9,21 @@
 .excluir-produto {
     background-color: darkred;
 }
+
+.botao {
+    width: 250px;
+    height: 45px;
+}
+
+.margem-acima-p{
+    margin-top: 10px;
+}
+
+.margem-acima-m{
+    margin-top: 50px;
+}
+
+.focus {
+    border-width: 10px;
+    border-color: red;
+}

@@ -7,16 +7,30 @@ import PageLancamentos from "./pages/lancamentos/PageLancamentos";
 import PageMaisVendidos from "./pages/mais-vendidos/PageMaisVendidos";
 import PageCadastroCliente from "./pages/cliente/PageCadastroCliente";
 import PageCarrinhoCompras from "./pages/carrinho/PageCarrinhoCompras";
+import PagePagamento from "./pages/pagamento/PagePagamento";
+import PageProcessamento from "./pages/processamento/PageProcessamento";
 
 function App() {
   //Variáveis que serão utilizados no Mock  
 
   //Itens do carrinho
   const [itensCarrinho, setItensCarrinho] = useState([]);
+  const [totalCarrinho, setTotalCarrinho] = useState(0.00);
+  const [idPedido, setIdPedido] = useState('');
+  
 
   useEffect(()=>{
-    console.log("Itens atualmente no carrinho: ");
-    console.log(itensCarrinho);
+    if (itensCarrinho.length > 0){
+      console.log("Itens atualmente no carrinho: ");
+      console.log(itensCarrinho);
+      const somaCarr = itensCarrinho
+          .map(livro => livro.preco)
+          .reduce((somaParcial, precoLivroAtual) => somaParcial + precoLivroAtual);
+      setTotalCarrinho(somaCarr);
+    }
+    else{
+      setTotalCarrinho(0.00);
+    }
   }, [itensCarrinho]);
 
   function adicionarCarrinho(produto){
@@ -24,11 +38,14 @@ function App() {
     setItensCarrinho([...itensCarrinho, produto]);
   };
 
-  function removerCarrinho(produto){
-    console.log("Removendo do carrinho...");
-    setItensCarrinho(
-      (itensCarrinho.filter((item) => {return item!=produto}))
-    );
+  function removerCarrinho(tituloLivro){
+    const novoArray = itensCarrinho.filter(item => item.titulo != tituloLivro);
+    setItensCarrinho(novoArray);
+  }
+
+  function geraPedido(){
+    setIdPedido((Math.random()+1).toString(36).substring(7));
+    console.log(idPedido);
   }
 
   return (
@@ -49,13 +66,28 @@ function App() {
       <Route exact path="/carrinho-compras" element={
           <PageCarrinhoCompras 
             itensCarrinho={itensCarrinho} 
-            numProdutos={itensCarrinho.length}
+            numLivros={itensCarrinho.length}
             removerCarrinho={removerCarrinho}
+            totalCarrinho={totalCarrinho}
             />} />
       
+      <Route exact path="/pagamento" element={
+          <PagePagamento 
+            itensCarrinho={itensCarrinho} 
+            totalCarrinho={totalCarrinho}
+            />} />
+
+      <Route exact path="/processamento" element={
+          <PageProcessamento 
+            itensCarrinho={itensCarrinho} 
+            totalCarrinho={totalCarrinho}
+            geraPedido={geraPedido}
+            />} />
+
       <Route exact path="/" element={<Home 
           adicionarCarrinho={adicionarCarrinho}
-          numProdutos={itensCarrinho.length}
+          numLivros={itensCarrinho.length}
+          totalCarrinho={totalCarrinho}
           />} />
     
     </Routes>

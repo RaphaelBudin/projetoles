@@ -17,6 +17,7 @@ export default function CadastroLivro(){
     event.preventDefault();
     alert('Livro cadastrado com sucesso!');
     //ID do livro será o próprio ISBN
+    //Usar toLocaleString para limitar a 2 casas decimais e arrendondar para cima 
   }
 
   function validaAutor(event){
