@@ -16,7 +16,8 @@ function App() {
   //Itens do carrinho
   const [itensCarrinho, setItensCarrinho] = useState([]);
   const [totalCarrinho, setTotalCarrinho] = useState(0.00);
-  const [idPedido, setIdPedido] = useState('');
+  const [idPedido, setIdPedido] = useState(20220000);
+  const [itensPedido, setItensPedido] = useState([]);
   
 
   useEffect(()=>{
@@ -33,6 +34,12 @@ function App() {
     }
   }, [itensCarrinho]);
 
+  useEffect(()=>{
+    console.log("ID Pedido: ");
+    console.log(idPedido);
+    //setItensCarrinho([]);    
+  }, [idPedido])
+
   function adicionarCarrinho(produto){
     console.log("Adicionando ao carrinho...");
     setItensCarrinho([...itensCarrinho, produto]);
@@ -41,10 +48,20 @@ function App() {
   function removerCarrinho(tituloLivro){
     const novoArray = itensCarrinho.filter(item => item.titulo != tituloLivro);
     setItensCarrinho(novoArray);
+    console.log("Item removido!");
   }
 
   function geraPedido(){
-    setIdPedido((Math.random()+1).toString(36).substring(7));
+    console.log("GERANDO PEDIDO");
+    console.log("Itens no carrinho atualmente: ");
+    console.log(itensCarrinho);
+    console.log("Adicionando itens ao pedido...");
+    const temp = Array.from(itensCarrinho);
+    console.log(temp);
+    setItensPedido(temp);
+    console.log(itensPedido);
+    console.log("Gerando ID pedido...");
+    setIdPedido(idPedido+1);
     console.log(idPedido);
   }
 
@@ -75,13 +92,15 @@ function App() {
           <PagePagamento 
             itensCarrinho={itensCarrinho} 
             totalCarrinho={totalCarrinho}
+            geraPedido={geraPedido}
             />} />
 
       <Route exact path="/processamento" element={
           <PageProcessamento 
             itensCarrinho={itensCarrinho} 
             totalCarrinho={totalCarrinho}
-            geraPedido={geraPedido}
+            idPedido={idPedido}
+            itensPedido={itensPedido}
             />} />
 
       <Route exact path="/" element={<Home 

@@ -5,7 +5,7 @@ import LogoFatec from "../../public/logo-fatec-transparente.png";
 
 export default function Footer() {
   return (
-    <Navbar bg="dark" variant="dark" className="footer-navbar">
+    <Navbar bg="dark" variant="dark" className="footer-navbar" sticky="bottom">
       <Container className="container">
         <Navbar.Brand href="#home">
           <img

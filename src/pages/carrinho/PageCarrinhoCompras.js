@@ -57,12 +57,19 @@ export default function PageCarrinhoCompras(props){
                 
                 <Row>{listItensCarrinho}</Row>
                 
-                <Row className=''> 
-                    <Button onClick={finalizarCompra} className='botao centralizado'>
-                        Confirmar Compra
-                    </Button>
+                <br/> <br/>
+                <Row>
+                    <Col>
+                        <Button 
+                            onClick={finalizarCompra} 
+                            className='botao centralizado' 
+                            disabled={(props.itensCarrinho.length==0)}
+                            >
+                            Confirmar Compra
+                        </Button>
+                    </Col> 
                 </Row>
-            
+                
             </Container>
             
             <Modal show={show} onHide={handleClose}>
