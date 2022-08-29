@@ -14,6 +14,7 @@ export default function MaisVendidos(props) {
       autor: "Robert Cecil Martin",
       preco: 71.89,
       url: "https://images-na.ssl-images-amazon.com/images/I/41xShlnTZTL._SX376_BO1,204,203,200_.jpg",
+      categorias:"Java",
     },
     {
       id: 2,
@@ -21,6 +22,7 @@ export default function MaisVendidos(props) {
       autor: "Robert Cecil Martin",
       preco: 67.56,
       url: "https://images-na.ssl-images-amazon.com/images/I/41-sN-mzwKL.jpg",
+      categorias:"Java",
     },
     {
       id: 3,
@@ -28,6 +30,7 @@ export default function MaisVendidos(props) {
       autor: "Robert Cecil Martin",
       preco: 31.9,
       url: "https://m.media-amazon.com/images/I/41u6zi8JVML.jpg",
+      categorias:"Geral",
     },
     {
       id: 4,
@@ -35,6 +38,7 @@ export default function MaisVendidos(props) {
       autor: "Jeff Sutherland",
       preco: 71.89,
       url: "https://m.media-amazon.com/images/P/B07NCYLTKM.01._SCLZZZZZZZ_SX500_.jpg",
+      categorias:"Geral",
     },
   ];
   const listLivros = livros.map((livro) => {

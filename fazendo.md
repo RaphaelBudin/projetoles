@@ -7,6 +7,8 @@ Pendências ou ajustes póstumos por página:
 - [ ] Cadastrar o livro nas Props
     - [ ] Mostrar na Página Inicial em Livros Cadastrados 
 
+# Navbar
+- [x] Remover aba de cadastros
 # App
 - [ ] Refatorar itensCarrinho e Total carrinho para => Carrinho
 
