@@ -17,7 +17,14 @@ export default function AddToCartButton(props) {
   function handleShow() {setShow(true);}
 
   function clickHandler() {
-    props.adicionarCarrinho({titulo:props.titulo, autor:props.autor, preco:props.preco, url:props.url, altura:props.height, largura:props.width});
+    props.adicionarCarrinho({
+      titulo:props.titulo,
+      autor:props.autor,
+      preco:props.preco,
+      url:props.url,
+      altura:props.height,
+      largura:props.width
+    });
     handleShow();
   }
 

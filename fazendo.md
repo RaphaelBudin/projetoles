@@ -7,7 +7,9 @@ Pendências ou ajustes póstumos por página:
 - [ ] Cadastrar o livro nas Props
     - [ ] Mostrar na Página Inicial em Livros Cadastrados 
 
-# HOME
+# App
+- [ ] Refatorar itensCarrinho e Total carrinho para => Carrinho
+
 # Carrinho
 - [ ] Agregar os livros iguais
 - [ ] Opção de alterar quantidade
@@ -18,8 +20,8 @@ Pendências ou ajustes póstumos por página:
 - [ ] Validar número de cartão de crédito
 
 # Processamento
-- [ ] Gerar ID do Pedido de forma aleatória (pegar estado do App.js)
-- [ ] Informar resumo das compras
+- [ ] A tag img dos livros está invadindo a div abaixo, verificar
+- [ ] useNavigate para página detalheLivro, passando o livro via props
 
 # Geral
 - [ ] Fazer sistema de cadastro de usuários

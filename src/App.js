@@ -10,15 +10,17 @@ import PageCarrinhoCompras from "./pages/carrinho/PageCarrinhoCompras";
 import PagePagamento from "./pages/pagamento/PagePagamento";
 import PageProcessamento from "./pages/processamento/PageProcessamento";
 
+import {getCurrentDateTime} from './components/utils/getCurrentDateTime';
+import {getCurrentDate} from './components/utils/getCurrentDate';
+
 function App() {
   //Variáveis que serão utilizados no Mock  
 
   //Itens do carrinho
   const [itensCarrinho, setItensCarrinho] = useState([]);
   const [totalCarrinho, setTotalCarrinho] = useState(0.00);
-  const [idPedido, setIdPedido] = useState(20220000);
-  const [itensPedido, setItensPedido] = useState([]);
-  
+  const [idPedido, setIdPedido] = useState(getCurrentDate()*1000);
+  const [pedidos, setPedidos] = useState([]);
 
   useEffect(()=>{
     if (itensCarrinho.length > 0){
@@ -37,8 +39,15 @@ function App() {
   useEffect(()=>{
     console.log("ID Pedido: ");
     console.log(idPedido);
-    //setItensCarrinho([]);    
+    console.log("Lista de Pedidos:");
+    console.log(pedidos);
   }, [idPedido])
+
+  useEffect(()=>{
+    setItensCarrinho([]);
+    setTotalCarrinho(0.00);
+    console.log('Carrinho de pedidos zerado!');
+  }, [pedidos]);
 
   function adicionarCarrinho(produto){
     console.log("Adicionando ao carrinho...");
@@ -53,16 +62,19 @@ function App() {
 
   function geraPedido(){
     console.log("GERANDO PEDIDO");
-    console.log("Itens no carrinho atualmente: ");
-    console.log(itensCarrinho);
-    console.log("Adicionando itens ao pedido...");
-    const temp = Array.from(itensCarrinho);
-    console.log(temp);
-    setItensPedido(temp);
-    console.log(itensPedido);
-    console.log("Gerando ID pedido...");
+  
+    const novoPedido = ({
+      id:idPedido,
+      itens:itensCarrinho.map(livro => livro),
+      valorTotal:totalCarrinho,
+      dateTime:getCurrentDateTime('-'),
+      status:"Em Processamento...",
+    });
+
+    setPedidos([...pedidos,novoPedido]);
+
+    console.log("Atualizando ID pedido...");
     setIdPedido(idPedido+1);
-    console.log(idPedido);
   }
 
   return (
@@ -97,10 +109,9 @@ function App() {
 
       <Route exact path="/processamento" element={
           <PageProcessamento 
-            itensCarrinho={itensCarrinho} 
+            itensCarrinho={itensCarrinho}
             totalCarrinho={totalCarrinho}
-            idPedido={idPedido}
-            itensPedido={itensPedido}
+            pedidos={pedidos}
             />} />
 
       <Route exact path="/" element={<Home 

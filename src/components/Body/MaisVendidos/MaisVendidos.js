@@ -9,24 +9,28 @@ export default function MaisVendidos(props) {
 
   const livros = [
     {
+      id: 1,
       titulo: "Clean Code",
       autor: "Robert Cecil Martin",
       preco: 71.89,
       url: "https://images-na.ssl-images-amazon.com/images/I/41xShlnTZTL._SX376_BO1,204,203,200_.jpg",
     },
     {
+      id: 2,
       titulo: "Clean Architecture",
       autor: "Robert Cecil Martin",
       preco: 67.56,
       url: "https://images-na.ssl-images-amazon.com/images/I/41-sN-mzwKL.jpg",
     },
     {
+      id: 3,
       titulo: "Desenvolvimento Ágil Limpo",
       autor: "Robert Cecil Martin",
       preco: 31.9,
       url: "https://m.media-amazon.com/images/I/41u6zi8JVML.jpg",
     },
     {
+      id: 4,
       titulo: "Scrum",
       autor: "Jeff Sutherland",
       preco: 71.89,
@@ -35,7 +39,7 @@ export default function MaisVendidos(props) {
   ];
   const listLivros = livros.map((livro) => {
     return (
-      <Col className="info-livros centralizado" key={livro.titulo}>
+      <Col className="info-livros centralizado" key={livro.id}>
         <p className="titulo">    {livro.titulo} </p>
         <p className="autor"> <i> {livro.autor} </i> </p>
         <p className="preco">     {livro.preco} </p>

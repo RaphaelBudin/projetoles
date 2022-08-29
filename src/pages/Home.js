@@ -13,7 +13,6 @@ export default function Home(props) {
         <Body adicionarCarrinho={props.adicionarCarrinho}/>
         <footer>
           <br/><br/><br/><br/>
-          <Footer />
         </footer>
       </div>
     </>

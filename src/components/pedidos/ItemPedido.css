@@ -1,0 +1,27 @@
+.container {
+    margin: auto;
+}
+
+.centralizado {
+    text-align: center;
+}
+
+.titulo{
+    color: black;
+    font-size: large;
+}
+
+.autor {
+    color:black;
+    font-size: medium;
+}
+
+.preco {
+    color: blue;
+    font-size: medium;
+}
+
+.status {
+    text-align: left;
+    margin-left: 0;
+}

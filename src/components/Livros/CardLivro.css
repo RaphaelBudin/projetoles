@@ -1,0 +1,18 @@
+button {
+    border: none;
+    background-color: transparent;
+}
+
+button:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.btn-titulo {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.btn-autor {
+    font-style: italic;
+}

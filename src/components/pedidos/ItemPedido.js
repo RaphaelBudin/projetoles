@@ -2,25 +2,25 @@ import './ItemPedido.css';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import CardLivro from '../Livros/CardLivro';
 
 export default function ItemPedido(props){
-    //const itensPedido = props.itensPedido.map((livro) => livro);
+    const listItens = props.pedido.itens.map((livro)=>
+                <CardLivro livro={livro} key={livro.id}/>
+    );
     
     return (
-        <Container>
-            <h1> Resumo do Pedido </h1>
-            <p> 
-                ID do Pedido: 
-                {props.idPedido}
-            </p>
+        <Container className="container" fluid> 
+            <Row> <h1>Pedido: {props.pedido.id} </h1></Row>                
+            <Row> Valor: {props.pedido.valorTotal}</Row>
+            <Row> Data e Hora da Compra: {props.pedido.dateTime} </Row>
+            <Row><p className='status'>Status: <b>{props.pedido.status}</b></p></Row>
+            <h3><u>ITENS</u></h3>
+            <br/>
+            <Row>{listItens}</Row>
             <br/>
             <br/>
             <br/>
-            <h3> Itens Pedido: </h3>
-            <Row> 
-                <Col>
-                </Col>
-            </Row>
         </Container>
     );
 }
