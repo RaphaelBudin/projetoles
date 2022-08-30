@@ -2,7 +2,7 @@ import { useState, CreateContext } from "react";
 
 const DetalheLivroContext = CreateContext();
 
-export default function DetalheLivroContextProvider(props){
+function DetalheLivroContextProvider12333123131(props){
     const [detalheLivro, setDetalheLivro] = useState([]);
     
     function setLivro(props){

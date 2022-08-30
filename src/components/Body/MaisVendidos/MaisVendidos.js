@@ -4,8 +4,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import AddToCartButton from "../../Shopping/Cart/AddToCartButton";
 import CardLivro from "../../Livros/CardLivro";
-import DetalheLivroContextProvider from "../../../contexts/DetalheLivroContext";
-import {useState, useContext} from 'react';
 
 const livros = [
   {
@@ -43,8 +41,6 @@ const livros = [
 ];
 
 export default function MaisVendidos(props) {
-  const {getLivro, setLivro} = useContext(DetalheLivroContextProvider);
-
 
   const listLivros = livros.map((livro) => {
     return (
@@ -71,10 +67,7 @@ export default function MaisVendidos(props) {
 
   const listLivros2 = livros.map((livro)=>{
     return (
-      <DetalheLivroContextProvider>
-        <CardLivro livro={livro} getLivro={getLivro} setLivro={setLivro}/>
-      </DetalheLivroContextProvider>
-      
+        <CardLivro livro={livro}/>      
     );
   });
 
@@ -83,7 +76,7 @@ export default function MaisVendidos(props) {
       <br />
       <h1 className="centralizado"> Mais Vendidos </h1>
       <br />
-      <Row>{listLivros1}</Row>
+      <Row>{listLivros}</Row>
       <Row>{listLivros2}</Row>
     </>
   );

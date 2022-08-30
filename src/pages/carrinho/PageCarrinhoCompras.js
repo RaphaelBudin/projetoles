@@ -8,6 +8,10 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Form, FormGroup } from 'react-bootstrap';
+import { IMaskInput } from 'react-imask';
+
+
 
 export default function PageCarrinhoCompras(props){
 
@@ -56,6 +60,19 @@ export default function PageCarrinhoCompras(props){
                 </h2>                
                 
                 <Row>{listItensCarrinho}</Row>
+
+                <Row>
+                    <FormGroup controlId="formCEP">
+                        <Form.Label> CEP </Form.Label>
+                        <Form.Control 
+                            placeholder='08123-06'
+                            as={IMaskInput}
+                            mask="00000-000"
+                            required
+                        />
+                        <Form.Text> Inclua apenas números </Form.Text>
+                    </FormGroup>
+                </Row>
                 
                 <br/> <br/>
                 <Row>
