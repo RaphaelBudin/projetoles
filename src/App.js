@@ -14,6 +14,7 @@ import {getCurrentDateTime} from './components/utils/getCurrentDateTime';
 import {getCurrentDate} from './components/utils/getCurrentDate';
 import CategoriaJava from "./pages/categoria/java/CategoriaJava";
 import CategoriaGeral from "./pages/categoria/geral/CategoriaGeral";
+import DetalheLivro from "./pages/livro/DetalheLivro";
 
 function App() {
   //Variáveis que serão utilizados no Mock  
@@ -23,6 +24,8 @@ function App() {
   const [totalCarrinho, setTotalCarrinho] = useState(0.00);
   const [idPedido, setIdPedido] = useState(getCurrentDate()*1000);
   const [pedidos, setPedidos] = useState([]);
+  const [livroDetalhe, setLivroDetalhe] = useState([]);
+  const [autorDetalhe, setAutorDetalhe] = useState([]);
 
   useEffect(()=>{
     if (itensCarrinho.length > 0){
@@ -110,8 +113,12 @@ function App() {
             adicionarCarrinho={adicionarCarrinho} 
             numLivros={itensCarrinho.length}
             />}/>
-
       </Route>
+
+      <Route exact path="/detalheLivro" element={
+          <DetalheLivro
+            numLivros={itensCarrinho.length}
+          />}/> 
 
 
       <Route exact path="/carrinho-compras" element={

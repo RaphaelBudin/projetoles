@@ -68,6 +68,7 @@ export default function FormPagamento(props){
                             <Form.Control 
                                 type="number"
                                 placeholder="12" 
+                                required
                         />
                         </Form.Group>
                    </Col> 
@@ -78,8 +79,8 @@ export default function FormPagamento(props){
                         <Form.Control 
                             type="number"
                             placeholder="27" 
-                            
-                            />
+                            required
+                        />
                     </Form.Group>
                 </Col>
                 
@@ -89,7 +90,7 @@ export default function FormPagamento(props){
                         <Form.Control 
                             type="number" 
                             placeholder='123'
-                            
+                            required
                         />
                     </Form.Group>
                 </Col>

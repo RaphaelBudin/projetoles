@@ -6,12 +6,8 @@ export default function CardLivro(props){
     const navigate = useNavigate();
     
     function irDetalheLivro(){
-        let caminho = '/livros:'+ props.livro.id;
-        console.log("Caminho:");
-        console.log(caminho);
-        console.log("Props Livro: ");
-        console.log(props.livro);
-        //navigate(caminho);
+        props.setDetalheLivro(props.livro);
+        navigate('/detalhelivro');
     }
 
     function irDetalheAutor(evento){
