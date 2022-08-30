@@ -5,7 +5,7 @@ import CustomNavbar from '../../components/Header/CustomNavbar';
 export default function PageMaisVendidos(props){
     return (
         <>
-            <CustomNavbar/>
+            <CustomNavbar numLivros={props.numLivros}/>
             <MaisVendidos adicionarCarrinho={props.adicionarCarrinho}/>
         </>
     );

@@ -31,7 +31,6 @@ export default function CustomNavbar(props) {
 
             <NavDropdown title="Categorias" id="collasible-nav-dropdown">
               <Link to="/categorias/java" className="dropdown-link"> Java </Link> <br/>
-              <Link to="/categorias/ruby" className="dropdown-link"> Ruby </Link> <br/>
               <Link to="/categorias/geral" className="dropdown-link"> Geral</Link> <br/>
             </NavDropdown>
 
@@ -43,7 +42,7 @@ export default function CustomNavbar(props) {
               height="40"
               width="40"
             />
-            <span className="contagem-produtos">{props.numProdutos}</span>
+            <span className="contagem-produtos">{props.numLivros}</span>
           </button>
 
           <Form className="d-flex">
@@ -60,16 +59,3 @@ export default function CustomNavbar(props) {
     </Navbar>
   );
 }
-
-/*
-        <Navbar.Brand href="/" >Projeto LES</Navbar.Brand>
-
-
-<NavDropdown.Item href="/todos-livros/java">Java</NavDropdown.Item>
-<NavDropdown.Item href="/todos-livros/ruby">Ruby</NavDropdown.Item>
-<NavDropdown.Item href="/todos-livros/geral">Geral</NavDropdown.Item>
-
-<NavDropdown.Item href="/cadastro-livro">Cadastro Livro</NavDropdown.Item>
-<NavDropdown.Item href="/cadastro-cliente">Cadastro Cliente</NavDropdown.Item>
-
-*/

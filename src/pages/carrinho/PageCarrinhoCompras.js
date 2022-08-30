@@ -41,7 +41,7 @@ export default function PageCarrinhoCompras(props){
 
     return (
         <>
-            <CustomNavbar />
+            <CustomNavbar numLivros={props.numLivros}/>
             <Container className='margem-acima-p centralizado'>
                 
                 <h1 className=''> 

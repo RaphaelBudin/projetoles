@@ -12,6 +12,8 @@ import PageProcessamento from "./pages/processamento/PageProcessamento";
 
 import {getCurrentDateTime} from './components/utils/getCurrentDateTime';
 import {getCurrentDate} from './components/utils/getCurrentDate';
+import CategoriaJava from "./pages/categoria/java/CategoriaJava";
+import CategoriaGeral from "./pages/categoria/geral/CategoriaGeral";
 
 function App() {
   //Variáveis que serão utilizados no Mock  
@@ -88,10 +90,30 @@ function App() {
       
       <Route exact path="/mais-vendidos" element={
           <PageMaisVendidos 
-            adicionarCarrinho={adicionarCarrinho}/>} />
+            adicionarCarrinho={adicionarCarrinho}
+            numLivros={itensCarrinho.length}
+            />} />
       
-      <Route exact path="/lancamentos" element={<PageLancamentos/>} />
+      <Route exact path="/lancamentos" element={
+          <PageLancamentos
+            numLivros={itensCarrinho.length}
+          />} />
       
+      <Route path="categorias">
+        <Route exact path="java" element={
+          <CategoriaJava
+            adicionarCarrinho={adicionarCarrinho} 
+            numLivros={itensCarrinho.length}
+            />}/>
+        <Route exact path="geral" element={
+          <CategoriaGeral
+            adicionarCarrinho={adicionarCarrinho} 
+            numLivros={itensCarrinho.length}
+            />}/>
+
+      </Route>
+
+
       <Route exact path="/carrinho-compras" element={
           <PageCarrinhoCompras 
             itensCarrinho={itensCarrinho} 
