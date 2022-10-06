@@ -15,6 +15,7 @@ import {getCurrentDate} from './components/utils/getCurrentDate';
 import CategoriaJava from "./pages/categoria/java/CategoriaJava";
 import CategoriaGeral from "./pages/categoria/geral/CategoriaGeral";
 import DetalheLivro from "./pages/livro/DetalheLivro";
+import EditaLivro from "./pages/livro/EditaLivro";
 
 function App() {
   //Variáveis que serão utilizados no Mock  
@@ -95,11 +96,15 @@ function App() {
           <PageMaisVendidos 
             adicionarCarrinho={adicionarCarrinho}
             numLivros={itensCarrinho.length}
+            livroDetalhe={livroDetalhe} setLivroDetalhe={setLivroDetalhe}
+            autorDetalhe={autorDetalhe} setAutorDetalhe={setAutorDetalhe}
             />} />
       
       <Route exact path="/lancamentos" element={
           <PageLancamentos
             numLivros={itensCarrinho.length}
+            livroDetalhe={livroDetalhe} setLivroDetalhe={setLivroDetalhe}
+            autorDetalhe={autorDetalhe} setAutorDetalhe={setAutorDetalhe}
           />} />
       
       <Route path="categorias">
@@ -107,17 +112,23 @@ function App() {
           <CategoriaJava
             adicionarCarrinho={adicionarCarrinho} 
             numLivros={itensCarrinho.length}
+            livroDetalhe={livroDetalhe} setLivroDetalhe={setLivroDetalhe}
+            autorDetalhe={autorDetalhe} setAutorDetalhe={setAutorDetalhe}
             />}/>
         <Route exact path="geral" element={
           <CategoriaGeral
             adicionarCarrinho={adicionarCarrinho} 
             numLivros={itensCarrinho.length}
+            livroDetalhe={livroDetalhe} setLivroDetalhe={setLivroDetalhe}
+            autorDetalhe={autorDetalhe} setAutorDetalhe={setAutorDetalhe}
             />}/>
       </Route>
 
       <Route exact path="/detalheLivro" element={
           <DetalheLivro
             numLivros={itensCarrinho.length}
+            livroDetalhe={livroDetalhe} setLivroDetalhe={setLivroDetalhe}
+            autorDetalhe={autorDetalhe} setAutorDetalhe={setAutorDetalhe}
           />}/> 
 
 
@@ -127,6 +138,8 @@ function App() {
             numLivros={itensCarrinho.length}
             removerCarrinho={removerCarrinho}
             totalCarrinho={totalCarrinho}
+            livroDetalhe={livroDetalhe} setLivroDetalhe={setLivroDetalhe}
+            autorDetalhe={autorDetalhe} setAutorDetalhe={setAutorDetalhe}
             />} />
       
       <Route exact path="/pagamento" element={
@@ -141,12 +154,23 @@ function App() {
             itensCarrinho={itensCarrinho}
             totalCarrinho={totalCarrinho}
             pedidos={pedidos}
+            livroDetalhe={livroDetalhe} setLivroDetalhe={setLivroDetalhe}
+            autorDetalhe={autorDetalhe} setAutorDetalhe={setAutorDetalhe}
             />} />
+
+      <Route path="livro"> 
+        <Route exact path="cadastro"  element={<CadastroLivro/>}/>
+        <Route exact path="edicao"    element={<EditaLivro/>}/>
+        <Route exact path="detalhe"   element={<DetalheLivro/>}/>
+      </Route>
+
 
       <Route exact path="/" element={<Home 
           adicionarCarrinho={adicionarCarrinho}
           numLivros={itensCarrinho.length}
           totalCarrinho={totalCarrinho}
+          livroDetalhe={livroDetalhe} setLivroDetalhe={setLivroDetalhe}
+          autorDetalhe={autorDetalhe} setAutorDetalhe={setAutorDetalhe}
           />} />
     
     </Routes>

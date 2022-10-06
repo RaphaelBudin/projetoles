@@ -5,8 +5,16 @@ import CustomNavbar from '../../components/Header/CustomNavbar';
 export default function PageMaisVendidos(props){
     return (
         <>
-            <CustomNavbar numLivros={props.numLivros}/>
-            <MaisVendidos adicionarCarrinho={props.adicionarCarrinho}/>
+            <CustomNavbar 
+                numLivros={props.numLivros}
+                livroDetalhe={livroDetalhe} setLivroDetalhe={setLivroDetalhe}
+                autorDetalhe={autorDetalhe} setAutorDetalhe={setAutorDetalhe}
+            />
+            <MaisVendidos 
+                adicionarCarrinho={props.adicionarCarrinho}
+                livroDetalhe={livroDetalhe} setLivroDetalhe={setLivroDetalhe}
+                autorDetalhe={autorDetalhe} setAutorDetalhe={setAutorDetalhe}    
+            />
         </>
     );
 }

@@ -7,7 +7,7 @@ import CardLivro from "../../Livros/CardLivro";
 
 const livros = [
   {
-    id: 1,
+    id: 1,  
     titulo: "Clean Code",
     autor: "Robert Cecil Martin",
     preco: 71.89,
@@ -67,7 +67,11 @@ export default function MaisVendidos(props) {
 
   const listLivros2 = livros.map((livro)=>{
     return (
-        <CardLivro livro={livro}/>      
+        <CardLivro 
+          livro={livro}
+          livroDetalhe={props.livroDetalhe} setLivroDetalhe={props.setLivroDetalhe}
+          autorDetalhe={props.autorDetalhe} setAutorDetalhe={props.setAutorDetalhe}
+        />      
     );
   });
 

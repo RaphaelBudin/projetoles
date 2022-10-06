@@ -34,6 +34,13 @@ export default function CustomNavbar(props) {
               <Link to="/categorias/geral" className="dropdown-link"> Geral</Link> <br/>
             </NavDropdown>
 
+            <NavDropdown title="Livros">
+              <Link to="/livro/cadastro"> Cadastro </Link>
+              <Link to="/livro/edicao"> Edição </Link>
+              <Link to="/livro/detalhe"> Detalhe </Link>
+
+            </NavDropdown>
+
           </Nav>
 
           <button className="carrinho-compras" onClick={()=>{navigate('/carrinho-compras')}}>

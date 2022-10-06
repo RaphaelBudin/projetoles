@@ -5,8 +5,9 @@ import {useNavigate} from 'react-router-dom';
 export default function CardLivro(props){
     const navigate = useNavigate();
     
-    function irDetalheLivro(){
-        props.setDetalheLivro(props.livro);
+    function irDetalheLivro(evento){
+        console.log(evento);
+        props.setLivroDetalhe();
         navigate('/detalhelivro');
     }
 
